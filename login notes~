@@ -1,0 +1,114 @@
+	
+	/*do we need a check for if nothing at all was entered but login button pushed?
+	if(data==NULL)
+	{
+		display error page? return 0 to quit?
+	}
+	
+	
+	//once variables have been stored properly, call validPair function 
+	
+	
+	
+	//to test ones
+	//char testName[50]="goon";
+	//char testPwd[50]="sanam";
+	//int test=validPair(testName, testPwd);
+	
+			
+	if(x==1)
+	{
+		printf("<html>");
+		printf("<head>");
+		printf("<body>");
+		printf("<p>loggedin</p>");
+		return 1;
+	}
+	
+	else
+	{
+		printf("<html>");
+		printf("<head>");
+		printf("<body>");
+		printf("<p>error</p>");
+		return 0;
+	}
+	
+	printf("</body>");
+	printf("</head>");
+	printf("</html>");
+	
+
+	
+	//to test: 
+	//char usernameInputted[50]="goon";
+	//char pwdInputted[50]="sanam";
+	//int x=validPair(usernameInputted, pwdInputted);
+	
+	//when user is correctly logged in: append username to LoggedIn.csv
+	//display catalogue page
+	
+	if(test==1)
+	{
+		printf("Content-type:text/html\n\n");
+
+			
+		//for now just print the word catalogue if user logged in correctly
+		printf("<html>");
+		printf("<head>");
+		printf("<body>");
+		printf("<p> catalogue</p>");
+		printf("</body>");
+		printf("</head>");
+		printf("</html>");
+		
+		/later: display catalogue page (adams work)
+		don't have those 3 printf statements <html> <head> <body> in catalogue.hmtl file
+		TELL ADAM!! & to use Post Method for login.html
+		need proper link to adamslinktocatalogue.html
+		*FILE *catPointer;
+		catPointer=fopen("adamslinktocatalogue.html", "r+");
+		char catalogueLine[200]; //will store line from catalogue file
+		while(fgets(catalogueLine, sizeof(CatalogueLine), catPointer))
+		{
+			printf("%s", catalogueLine);
+		}
+		
+		printf("<input type=\"hidden\", name=\"username\">"); 
+		printf("</form>"); //close form. whoever writes catalogue page shouldn't write this
+		
+		//printf("</body>");
+		//printf("</head>");
+		//printf("</html>");
+		
+		//fclose(catPointer);
+		
+		//return 1;
+	}
+
+	if(test!=1)
+	{
+		printf("Content-type:text/html\n\n");
+
+		printf("<html>");
+		printf("<head>");
+		printf("<body>");
+		printf("<p>error</p>");
+		
+		printf("User Not Found \n");
+		LATER: create error page - COLLABORATE WITH ADAM FOR CONSISTENT FORMATTING
+		on error page: 2 links: link home and link to login page
+		//for now: just print the word error
+
+		printf("Content-type: text/html; charset=us-ascii");
+		printf("Content-type: text/html\n\n");
+		printf("<html>");
+		printf("<head>");
+		printf("<body>");
+		printf("<p>error</p>");
+
+		printf("</body>");
+		printf("</head>");
+		printf("</html>");
+		return 0;
+	}*/
