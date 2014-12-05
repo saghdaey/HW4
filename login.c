@@ -97,6 +97,21 @@ int main(void)
 	token2=strtok(tokenP,DELIM4); //token2 points to "password"
 	pwdIn=strtok(NULL,DELIM4); //this gets pwdInputted\0
 	//printf("%s\n",pwdIn);
+
+	//we need a check here: want an error page if user does not fill out both the username & password fields
+	if(usernameIn==NULL || pwdIn==NULL)
+	{
+		printf("Content-type:text/html\n\n");
+		printf("<html>");
+		printf("<head>");
+		printf("<title>The CatShop</title>");
+		printf("<body>");
+		printf("<p>Sorry. Please complete both the username & password fields. MEOW! </p>");
+		printf("<br>");
+		printf("<p>Link to login, link to home.</p>"); //need these links!
+		return 0;
+
+	}
 	
 	//now that username and password inputted variables are set, we call our validPair function
 	
@@ -112,7 +127,7 @@ int main(void)
 		printf("<head>");
 		printf("<body>");
 		printf("<input type=\"hidden\" name=\"usernameIn\">");//inserts hidden field, assigns usernameIn to field
-		printf("<p><a href=\"#\">Happy shopping!</a></p>");//message
+		printf("<p><a href=\"#\">Happy shopping, MEOW!</a></p>");//message
 		//display all of catalogue page 
 	}
 	
@@ -123,7 +138,7 @@ int main(void)
 		printf("<head>");
 		printf("<title>The CatShop</title>");
 		printf("<body>");
-		printf("<p>Sorry. The username & password combination you entered is incorrect.</p>");
+		printf("<p>Sorry. The username & password combination you entered is incorrect. MEOW! </p>");
 		printf("<br>");
 		printf("<p>Link to login, link to home.</p>"); //need these links!
 	}
