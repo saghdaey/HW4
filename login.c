@@ -98,7 +98,7 @@ int main(void)
 	pwdIn=strtok(NULL,DELIM4); //this gets pwdInputted\0
 	//printf("%s\n",pwdIn);
 
-	//we need a check here: want an error page if user does not fill out both the username & password fields
+	//if user does not fill out both fields - generate error page
 	if(usernameIn==NULL || pwdIn==NULL)
 	{
 		printf("Content-type:text/html\n\n");
@@ -113,7 +113,7 @@ int main(void)
 		printf("<img src=\"../pusheenNo.gif\" width=\"400\" height=\"400\">");
 		printf("<br>");
 		printf("<br>");
-		printf("<p>Please try again </p>");
+		printf("<p>Please try again. </p>");
 		printf("<br>");
 		printf("<a href=\"http://cgi.cs.mcgill.ca/~aalbar/login.html\">Log In Here, Meow!</a>");
 		printf("<br>");
@@ -130,7 +130,7 @@ int main(void)
 	
 	int x=validPair(usernameIn,pwdIn);
 	
-	//should we make these html prints like this:
+	//should we make these html prints like this instead?
 	//printf("%s\n\n","Content-type:text/html\n\n");
 	
 	if(x==1)
@@ -145,7 +145,7 @@ int main(void)
 		printf("<p>happy shopping, MEOW!</p>"); 
 	}
 	
-	else
+	else //username and password entered are not correct, generate error page
 	{
 		printf("Content-type:text/html\n\n");
 		printf("<html>");
