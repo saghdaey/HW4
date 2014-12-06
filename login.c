@@ -139,10 +139,23 @@ int main(void)
 		printf("<html>");
 		printf("<head>");
 		printf("<body>");
-		printf("<input type=\"hidden\" name=\"usernameIn\">");//inserts hidden field, assigns usernameIn to field
-		//printf("<p><a href=\"#\">Happy shopping, MEOW!</a></p>");//message
-		//display all of catalogue page
 		printf("<p>happy shopping, MEOW!</p>"); 
+
+		//display catalogue
+
+		FILE *catPointer;
+		catPointer=fopen("../catalog.html", "rt"); //need adams path to catalogue.html
+		char catalogueLine[200]; //will store line from catalogue file
+		while(fgets(catalogueLine, sizeof(catalogueLine), catPointer))
+		{
+			printf("%s", catalogueLine);
+		}
+
+		fclose(catPointer);
+		printf("<input type=\"hidden\" name=\"usernameIn\" value=%s />", usernameIn);//inserts hidden field, assigns usernameIn to field //FIXXX
+
+		
+		
 	}
 	
 	else //username and password entered are not correct, generate error page
