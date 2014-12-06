@@ -106,9 +106,10 @@ int main(void)
 		printf("<head>");
 		printf("<title>The CatShop</title>");
 		printf("<body>");
-		printf("<p>Sorry. Please complete both the username & password fields. MEOW! </p>");
+		printf("<p>Sorry. Please complete both the username & password fields. Try Again! </p>");
 		printf("<br>");
-		printf("<p>Link to login, link to home.</p>"); //need these links!
+		printf("<center><a href=\"http://cgi.cs.mcgill.ca/~aalbar/login.html\">Log In Here, Meow!</a></center>");
+		printf("<center><a href=\"http://cgi.cs.mcgill.ca/~aalbar/index.html\">Go Home, Meow!</a></center>");
 		return 0;
 
 	}
@@ -139,10 +140,11 @@ int main(void)
 		printf("<head>");
 		printf("<title>The CatShop</title>");
 		printf("<body>");
-		printf("<p>Sorry. The username & password combination you entered is incorrect. MEOW! </p>");
+		printf("<p>Sorry. The username & password combination you entered is incorrect. </p>");
 		printf("<br>");
-		printf("<center><a href=\"http://cgi.cs.mcgill.ca/~aalbar/login.html\">Login Again</a></center>");
-		//printf("<p>Link to login, link to home.</p>"); //need these links!
+		printf("<center><a href=\"http://cgi.cs.mcgill.ca/~aalbar/login.html\">Login Again, Meow!</a></center>");
+		printf("<center><a href=\"http://cgi.cs.mcgill.ca/~aalbar/index.html\">Go Home, Meow!</a></center>");
+		
 	}
 	
 	printf("</body>");
