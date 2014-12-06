@@ -106,10 +106,22 @@ int main(void)
 		printf("<head>");
 		printf("<title>The CatShop</title>");
 		printf("<body>");
-		printf("<p>Sorry. Please complete both the username & password fields. Try Again! </p>");
+		printf("<center>");
+		printf("<div style=\"background-color:white;font-size:25;color:#CC6600;padding:10px\">");
+		printf("<p> Did you fill out both fields?</p>");
 		printf("<br>");
-		printf("<center><a href=\"http://cgi.cs.mcgill.ca/~aalbar/login.html\">Log In Here, Meow!</a></center>");
-		printf("<center><a href=\"http://cgi.cs.mcgill.ca/~aalbar/index.html\">Go Home, Meow!</a></center>");
+		printf("<img src=\"../pusheenNo.gif\" width=\"400\" height=\"400\">");
+		printf("<br>");
+		printf("<br>");
+		printf("<p>Please try again </p>");
+		printf("<br>");
+		printf("<a href=\"http://cgi.cs.mcgill.ca/~aalbar/login.html\">Log In Here, Meow!</a>");
+		printf("<br>");
+		printf("<a href=\"http://cgi.cs.mcgill.ca/~aalbar/index.html\">Go Home, Meow!</a>");
+					
+		printf("</center>");
+		printf("</div>");
+
 		return 0;
 
 	}
@@ -140,10 +152,19 @@ int main(void)
 		printf("<head>");
 		printf("<title>The CatShop</title>");
 		printf("<body>");
-		printf("<p>Sorry. The username & password combination you entered is incorrect. </p>");
+		printf("<div style=\"background-color:white;font-size:25;color:#CC6600;padding:10px\">");
+		printf("<center>");
+		printf("<p>Is the username & password combination you entered correct? </p>");
 		printf("<br>");
-		printf("<center><a href=\"http://cgi.cs.mcgill.ca/~aalbar/login.html\">Login Again, Meow!</a></center>");
-		printf("<center><a href=\"http://cgi.cs.mcgill.ca/~aalbar/index.html\">Go Home, Meow!</a></center>");
+		printf("<img src=\"../pusheenNo.gif\" width=\"400\" height=\"400\">");
+		printf("<br>");
+		printf("<br>");
+		printf("<p>Please try again.</p>");
+		printf("<a href=\"http://cgi.cs.mcgill.ca/~aalbar/login.html\">Login Again, Meow!</a>");
+		printf("<br>");
+		printf("<a href=\"http://cgi.cs.mcgill.ca/~aalbar/index.html\">Go Home, Meow!</a>");
+		printf("</center>");
+		printf("</div>");
 		
 	}
 	
