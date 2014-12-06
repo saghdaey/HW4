@@ -127,8 +127,9 @@ int main(void)
 		printf("<head>");
 		printf("<body>");
 		printf("<input type=\"hidden\" name=\"usernameIn\">");//inserts hidden field, assigns usernameIn to field
-		printf("<p><a href=\"#\">Happy shopping, MEOW!</a></p>");//message
-		//display all of catalogue page 
+		//printf("<p><a href=\"#\">Happy shopping, MEOW!</a></p>");//message
+		//display all of catalogue page
+		printf("<p>happy shopping, MEOW!</p>"); 
 	}
 	
 	else
@@ -140,7 +141,8 @@ int main(void)
 		printf("<body>");
 		printf("<p>Sorry. The username & password combination you entered is incorrect. MEOW! </p>");
 		printf("<br>");
-		printf("<p>Link to login, link to home.</p>"); //need these links!
+		printf("<center><a href=\"http://cgi.cs.mcgill.ca/~aalbar/login.html\">Login Again</a></center>");
+		//printf("<p>Link to login, link to home.</p>"); //need these links!
 	}
 	
 	printf("</body>");
