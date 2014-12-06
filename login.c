@@ -88,17 +88,17 @@ int main(void)
 	//tokenize data to separate username from password
 		
 	tokenU=strtok(data,DELIM3); //tokenU points to this "username=usernameIn"
-	tokenP=strtok(NULL,DELIM3); //tokenP points to this "password=pwdInputted"
+	tokenP=strtok(NULL,DELIM3); //tokenP points to this "password=pwdIn/0"
 	
 	token1=strtok(tokenU,DELIM4); //token1 points to "username"
-	usernameIn=strtok(NULL,DELIM4); //usernameIn points to usernameInputted
+	usernameIn=strtok(NULL,DELIM4); //usernameIn points to usernameIn
 	//printf("%s\n",usernameIn);
 	
 	token2=strtok(tokenP,DELIM4); //token2 points to "password"
-	pwdIn=strtok(NULL,DELIM4); //this gets pwdInputted\0
+	pwdIn=strtok(NULL,DELIM4); //this gets pwdIn\0
 	//printf("%s\n",pwdIn);
 
-	//if user does not fill out both fields - generate error page
+	//if user does not fill out both fields - generate an error page
 	if(usernameIn==NULL || pwdIn==NULL)
 	{
 		printf("Content-type:text/html\n\n");
@@ -117,13 +117,10 @@ int main(void)
 		printf("<br>");
 		printf("<a href=\"http://cgi.cs.mcgill.ca/~aalbar/login.html\">Log In Here, Meow!</a>");
 		printf("<br>");
-		printf("<a href=\"http://cgi.cs.mcgill.ca/~aalbar/index.html\">Go Home, Meow!</a>");
-					
+		printf("<a href=\"http://cgi.cs.mcgill.ca/~aalbar/index.html\">Go Home, Meow!</a>");		
 		printf("</center>");
 		printf("</div>");
-
 		return 0;
-
 	}
 	
 	//now that username and password inputted variables are set, we call our validPair function
@@ -133,7 +130,7 @@ int main(void)
 	//should we make these html prints like this instead?
 	//printf("%s\n\n","Content-type:text/html\n\n");
 	
-	if(x==1)
+	if(x==1) //valid username, password - so display catalogue page
 	{
 		printf("Content-type:text/html\n\n");
 		printf("<html>");
@@ -153,9 +150,6 @@ int main(void)
 
 		fclose(catPointer);
 		printf("<input type=\"hidden\" name=\"usernameIn\" value=%s />", usernameIn);//inserts hidden field, assigns usernameIn to field //FIXXX
-
-		
-		
 	}
 	
 	else //username and password entered are not correct, generate error page
@@ -178,7 +172,6 @@ int main(void)
 		printf("<a href=\"http://cgi.cs.mcgill.ca/~aalbar/index.html\">Go Home, Meow!</a>");
 		printf("</center>");
 		printf("</div>");
-		
 	}
 	
 	printf("</body>");
