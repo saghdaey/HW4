@@ -141,7 +141,7 @@ int main(void)
 		//display catalogue
 
 		FILE *catPointer;
-		catPointer=fopen("../catalog.html", "rt"); //need adams path to catalogue.html
+		catPointer=fopen("../catalog.html", "rt"); 
 		char catalogueLine[200]; //will store line from catalogue file
 		while(fgets(catalogueLine, sizeof(catalogueLine), catPointer))
 		{
@@ -149,7 +149,7 @@ int main(void)
 		}
 
 		fclose(catPointer);
-		printf("<input type=\"hidden\" name=\"usernameIn\" value=%s />", usernameIn);//inserts hidden field, assigns usernameIn to field //FIXXX
+		printf("<input type=\"hidden\" name=\"usernameIn\" value=%s />", usernameIn);//inserts hidden field, assigns usernameIn to field
 	}
 	
 	else //username and password entered are not correct, generate error page
